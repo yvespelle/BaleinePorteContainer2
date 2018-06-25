@@ -48,12 +48,6 @@ public class Marchandise implements Serializable {
     @Size(max = 25)
     @Column(name = "POIDS")
     private String poids;
-    @Size(max = 25)
-    @Column(name = "LATITUDE")
-    private String latitude;
-    @Size(max = 25)
-    @Column(name = "LONGITUDE")
-    private String longitude;
 
     public Marchandise() {
     }
@@ -108,22 +102,6 @@ public class Marchandise implements Serializable {
 
     public void setPoids(String poids) {
         this.poids = poids;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
     }
 
     @Override

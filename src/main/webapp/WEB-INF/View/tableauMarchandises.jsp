@@ -1,7 +1,7 @@
 <%-- 
     Document   : tableauEmployes
     Created on : 19 juin 2018, 14:13:55
-    Author     : Groupe Rouge
+    Author     : Rive Droite
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -28,38 +28,33 @@
                             <h1>Liste des employés</h1>
                             <tr class="text-center">
                                 <th>Sél</th>
-                                <th>NOM</th>
-                                <th>PRENOM</th>
-                                <th>TEL DOMICILE</th>
-                                <th>TEL PORTABLE</th>
-                                <th>TEL PRO</th>
-                                <th>ADRESSE</th>
-                                <th>CODE POSTAL</th>
-                                <th>VILLE</th>
-                                <th>EMAIL</th>
+                                <th>NUMERO</th>
+                                <th>BATEAU</th>
+                                <th>DEPART</th>
+                                <th>DESTINATION</th>
+                                <th>CLIENT</th>
+                                <th>POIDS</th>
+
                             </tr>
                             </thead>
                             <c:forEach items="${cleListeEmployes}" var="employe">
                                 <tr>
                                     <td><input type="radio" name="idEmploye" value="${employe.id}" CHECKED></td>
-                                    <td>${employe.nom}</td>
-                                    <td>${employe.prenom}</td>
-                                    <td>${employe.teldom}</td>
-                                    <td>${employe.telport}</td>
-                                    <td>${employe.telpro}</td>
-                                    <td>${employe.adresse}</td>
-                                    <td>${employe.codepostal}</td>
-                                    <td>${employe.ville}</td>
-                                    <td>${employe.email}</td>
+                                    <td>${employe.numero}</td>
+                                    <td>${employe.bateau}</td>
+                                    <td>${employe.depart}</td>
+                                    <td>${employe.destination}</td>
+                                    <td>${employe.client}</td>
+                                    <td>${employe.poids}</td>
                                 </tr>                         
                             </c:forEach>
                     </table>
                     <button type="submit" name="action" value="VoirDetails" class="btn btn-primary">Details</button>
                     <button type="submit" name="action" value="ActionSupprimer" class="btn btn-primary">Supprimer</button>
                     <button type="submit" name="action" value="VoirAjouter" class="btn btn-primary">Ajouter</button>
-                    <button type="submit" name="action" value="VoirFlotte" class="btn btn-primary">Voir la flotte</button>
+                    <button type="submit" name="action" value="VoirEmployes" class="btn btn-primary">Voir les Employes</button>
                     <button type="submit" name="action" value="VoirClients" class="btn btn-primary">Voir les Clients</button>
-                    <button type="submit" name="action" value="VoirChargements" class="btn btn-primary">Voir les marchandises</button>
+                    <button type="submit" name="action" value="VoirFlotte" class="btn btn-primary">Voir la Flotte</button>
                     <button type="submit" name="action" value="Quitter" class="btn btn-warning">Quitter</button>
                 </form>
             </div>
