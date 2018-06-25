@@ -35,6 +35,11 @@ public Collection getEmployes() {
         return q.getResultList();
     }
 
+public Collection getClients() {
+        Query q = em.createQuery(EmployesConstantes.REQUEST_SELECT_TOUS_CLIENTS);
+        return q.getResultList();
+    }
+
 
 
 

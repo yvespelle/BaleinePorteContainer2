@@ -7,6 +7,9 @@ public final class EmployesConstantes {
     public static final String REQUEST_SELECT_EMPLOYES_ID = "SELECT e from Employes e where e.id=:";
     public static final String REQUEST_SELECT_TOUS_EMPLOYES = "SELECT e from Employes e";
     public static final String REQUEST_SELECT_UTILISATEURS = "SELECT u from Utilisateurs u";
+    public static final String REQUEST_SELECT_TOUS_CLIENTS = "SELECT c from Clients c";
+    public static final String REQUEST_SELECT_TOUS_BATEAUX = "SELECT f from Flotte f";
+    public static final String REQUEST_SELECT_TOUS_MARCHANDISES = "SELECT m from Marchandise m";
 
     //Constantes lié aux actions / submit
     public static final String ACTION = "action";
@@ -73,6 +76,6 @@ public final class EmployesConstantes {
     public static final String PAGE_DETAIL_EMPLOYE = "WEB-INF/View/detailsEmploye.jsp";
     public static final String PAGE_ACCUEIL = "WEB-INF/View/accueil.jsp";
     public static final String PAGE_AJOUTER_UN_EMPLOYE = "WEB-INF/View/ajouterUnEmploye.jsp";
-    public static final String PAGE_AJOUTER_5_EMPLOYES = "WEB-INF/View/ajouter5Employes.jsp";
+    public static final String PAGE_TOUS_LES_CLIENTS = "WEB-INF/View/tableauClients.jsp";
 
 }

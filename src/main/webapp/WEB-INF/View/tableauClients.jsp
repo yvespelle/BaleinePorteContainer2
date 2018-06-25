@@ -34,7 +34,7 @@
 
                         </tr>
                         </thead>
-                        <c:forEach items="${cleListeEmployes}" var="employe">
+                        <c:forEach items="${cleListeClients}" var="employe">
                             <tr>
                                 <td><input type="radio" name="idEmploye" value="${employe.id}" CHECKED></td>
                                 <td>${employe.nom}</td>

@@ -6,8 +6,10 @@
 package com.ctrl;
 
 import com.employes.utils.EmployesConstantes;
+import com.modele.Clients;
 import com.modele.Employes;
 import com.modele.Utilisateurs;
+//import com.sun.security.ntlm.Client;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -27,8 +29,10 @@ public class Controleur extends HttpServlet {
     @EJB
     private GestionDB gestionDB;
 
-   ArrayList<Employes> listeEmployes = new ArrayList<>();
+    ArrayList<Employes> listeEmployes = new ArrayList<>();
     ArrayList<Utilisateurs> listeUtilisateurs = new ArrayList<>();
+    ArrayList<Clients> listeClients = new ArrayList<>();
+
     Employes employe = new Employes();
     Utilisateurs utilisateurs = new Utilisateurs();
     String idEmploye = EmployesConstantes.FRM_ID_EMPL_SELECT;
@@ -82,7 +86,7 @@ public class Controleur extends HttpServlet {
                         }
                     }
                     break;
-                    
+
                 case EmployesConstantes.ACTION_VOIR_EMPLOYES:
                     listeEmployes.clear();
                     listeEmployes.addAll(gestionDB.getEmployes());
@@ -90,13 +94,24 @@ public class Controleur extends HttpServlet {
                     request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
                     break;
 
+                case EmployesConstantes.ACTION_VOIR_CLIENTS:
+                    listeClients.clear();
+                    listeClients.addAll(gestionDB.getClients());
+                    request.setAttribute("cleListeClients", listeClients);
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_CLIENTS).forward(request, response);
+                    break;
+                    
+                    
+                    
+                    
+                    
+
                 case EmployesConstantes.ACTION_QUITTER:
                     request.getRequestDispatcher(EmployesConstantes.PAGE_INDEX).forward(request, response);
                     break;
             }
         }
     }
-
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
