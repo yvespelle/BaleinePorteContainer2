@@ -17,7 +17,7 @@
 </head>
 <body> 
     <form action="Controleur" method="post">
-        Bonjour ${identifiants.login} ! <br /><br />
+        Bonjour ${utilisateurs.login} ! <br /><br />
         Choisissez votre action : <br /><br />
 
         <button type="submit" name="action" value="VoirEmployes" class="btn btn-primary">Consulter les employés</button>

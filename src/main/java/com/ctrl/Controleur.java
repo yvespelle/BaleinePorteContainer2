@@ -28,7 +28,7 @@ public class Controleur extends HttpServlet {
     private GestionDB gestionDB;
 
    ArrayList<Employes> listeEmployes = new ArrayList<>();
-    ArrayList<Utilisateurs> listeIdentifiants = new ArrayList<>();
+    ArrayList<Utilisateurs> listeUtilisateurs = new ArrayList<>();
     Employes employe = new Employes();
     Utilisateurs utilisateurs = new Utilisateurs();
     String idEmploye = EmployesConstantes.FRM_ID_EMPL_SELECT;
@@ -65,14 +65,14 @@ public class Controleur extends HttpServlet {
                             request.setAttribute("cleMessageErreur", EmployesConstantes.ERREUR_SAISIE_VIDE);
                             request.getRequestDispatcher(EmployesConstantes.PAGE_INDEX).forward(request, response);
                         } else {
-                            listeIdentifiants.addAll(gestionDB.getUtilisateurs());
+                            listeUtilisateurs.addAll(gestionDB.getUtilisateurs());
 
-                            for (Utilisateurs i : listeIdentifiants) {
+                            for (Utilisateurs i : listeUtilisateurs) {
 
                                 if (i.getLogin().equals(loginForm) && i.getMdp().equals(mdpForm)) {
                                     utilisateurs.setLogin(request.getParameter(EmployesConstantes.FRM_LOGIN));
-                                    session.setAttribute("identifiants", utilisateurs);
-                                    request.getRequestDispatcher(EmployesConstantes.PAGE_CHOIX).forward(request, response);
+                                    session.setAttribute("utilisateurs", utilisateurs);
+                                    request.getRequestDispatcher(EmployesConstantes.PAGE_ACCUEIL).forward(request, response);
 
                                 }
                             }

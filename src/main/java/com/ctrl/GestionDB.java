@@ -24,25 +24,14 @@ public class GestionDB {
 
     @PersistenceContext(unitName = "solutec-lyon_BaleinePorteContainer_war_1.0-SNAPSHOTPU")
     private EntityManager em;
-    @Resource
-    private javax.transaction.UserTransaction utx;
-    
-    
+
     public Collection getUtilisateurs() {
         Query q = em.createQuery(EmployesConstantes.REQUEST_SELECT_UTILISATEURS);
         return q.getResultList();
     }
 
-
     public void persist(Object object) {
-        try {
-            utx.begin();
-            em.persist(object);
-            utx.commit();
-        } catch (Exception e) {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
-            throw new RuntimeException(e);
-        }
+        em.persist(object);
     }
 
     // Add business logic below. (Right-click in editor and choose

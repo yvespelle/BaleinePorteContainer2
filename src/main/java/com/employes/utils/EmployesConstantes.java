@@ -6,7 +6,7 @@ public final class EmployesConstantes {
     public static final String REQUEST_DELETE_EMPLOYES = "DELETE from Employes e where e.id=:";
     public static final String REQUEST_SELECT_EMPLOYES_ID = "SELECT e from Employes e where e.id=:";
     public static final String REQUEST_SELECT_TOUS_EMPLOYES = "SELECT e from Employes e";
-    public static final String REQUEST_SELECT_UTILISATEURS = "SELECT i from Utilisateurs i";  
+    public static final String REQUEST_SELECT_UTILISATEURS = "SELECT u from Utilisateurs u";  
     public static final String REQUEST_AJOUTER_5_EMPLOYES = "INSERT INTO UTILISATEUR(LOGIN, PASSWORD) VALUES (?,?)";  
 
     //Constantes lié aux actions / submit
@@ -70,7 +70,7 @@ public final class EmployesConstantes {
     public static final String PAGE_INDEX = "WEB-INF/View/index.jsp";
     public static final String PAGE_TOUS_LES_EMPLOYES = "WEB-INF/View/tableauEmployes.jsp";
     public static final String PAGE_DETAIL_EMPLOYE = "WEB-INF/View/detailsEmploye.jsp";
-    public static final String PAGE_CHOIX = "WEB-INF/View/choix.jsp";
+    public static final String PAGE_ACCUEIL = "WEB-INF/View/accueil.jsp";
     public static final String PAGE_AJOUTER_UN_EMPLOYE = "WEB-INF/View/ajouterUnEmploye.jsp";
     public static final String PAGE_AJOUTER_5_EMPLOYES = "WEB-INF/View/ajouter5Employes.jsp";
 
