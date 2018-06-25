@@ -40,6 +40,11 @@ public Collection getClients() {
         return q.getResultList();
     }
 
+public Collection getMarchandises() {
+        Query q = em.createQuery(EmployesConstantes.REQUEST_SELECT_TOUS_MARCHANDISES);
+        return q.getResultList();
+    }
+
 
 
 

@@ -8,6 +8,7 @@ package com.ctrl;
 import com.employes.utils.EmployesConstantes;
 import com.modele.Clients;
 import com.modele.Employes;
+import com.modele.Marchandise;
 import com.modele.Utilisateurs;
 //import com.sun.security.ntlm.Client;
 import java.io.IOException;
@@ -32,6 +33,7 @@ public class Controleur extends HttpServlet {
     ArrayList<Employes> listeEmployes = new ArrayList<>();
     ArrayList<Utilisateurs> listeUtilisateurs = new ArrayList<>();
     ArrayList<Clients> listeClients = new ArrayList<>();
+    ArrayList<Marchandise> ListeMarchandises = new ArrayList<>();
 
     Employes employe = new Employes();
     Utilisateurs utilisateurs = new Utilisateurs();
@@ -100,6 +102,17 @@ public class Controleur extends HttpServlet {
                     request.setAttribute("cleListeClients", listeClients);
                     request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_CLIENTS).forward(request, response);
                     break;
+                    
+                    case EmployesConstantes.ACTION_VOIR_CHARGEMENTS:
+                    ListeMarchandises.clear();
+                    ListeMarchandises.addAll(gestionDB.getClients());
+                    request.setAttribute("cleListeMarchandises", ListeMarchandises);
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_MARCHANDISES).forward(request, response);
+                    break;
+                    
+                    
+                    
+                    
                     
                     
                     

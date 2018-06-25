@@ -77,5 +77,6 @@ public final class EmployesConstantes {
     public static final String PAGE_ACCUEIL = "WEB-INF/View/accueil.jsp";
     public static final String PAGE_AJOUTER_UN_EMPLOYE = "WEB-INF/View/ajouterUnEmploye.jsp";
     public static final String PAGE_TOUS_LES_CLIENTS = "WEB-INF/View/tableauClients.jsp";
+    public static final String PAGE_TOUS_MARCHANDISES = "WEB-INF/View/tableauMarchandises.jsp";
 
 }
