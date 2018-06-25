@@ -82,6 +82,17 @@ public class Controleur extends HttpServlet {
                         }
                     }
                     break;
+                    
+                case EmployesConstantes.ACTION_VOIR_EMPLOYES:
+                    listeEmployes.clear();
+                    listeEmployes.addAll(gestionDB.getEmployes());
+                    request.setAttribute("cleListeEmployes", listeEmployes);
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
+                    break;
+
+                case EmployesConstantes.ACTION_QUITTER:
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_INDEX).forward(request, response);
+                    break;
             }
         }
     }

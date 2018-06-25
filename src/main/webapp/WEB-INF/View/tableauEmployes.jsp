@@ -23,7 +23,6 @@
                     <table class="table table-striped custab">
 
                         <!--permet de faire disparaitre entrée du tableau s'il n'y a plus d'employé-->
-                        <c:if test="${!empty cleListeEmployes}">
                             <thead>
                             <h1>Liste des employés</h1>
                             <tr class="text-center">

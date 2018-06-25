@@ -6,6 +6,7 @@
 package com.ctrl;
 
 import com.employes.utils.EmployesConstantes;
+import static com.employes.utils.EmployesConstantes.REQUEST_SELECT_TOUS_EMPLOYES;
 import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,6 +30,21 @@ public class GestionDB {
         Query q = em.createQuery(EmployesConstantes.REQUEST_SELECT_UTILISATEURS);
         return q.getResultList();
     }
+public Collection getEmployes() {
+        Query q = em.createQuery(REQUEST_SELECT_TOUS_EMPLOYES);
+        return q.getResultList();
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     public void persist(Object object) {
         em.persist(object);
